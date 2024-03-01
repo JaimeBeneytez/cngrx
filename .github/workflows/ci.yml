@@ -1,0 +1,31 @@
+name: CI
+
+on:
+    push:
+        branches-ignore:
+          - main
+
+jobs:
+    ci:
+        name: CI • lint, test, build
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - uses: actions/setup-node@v3
+              with:
+                node-version: 16
+                cache: 'npm'
+
+            - name: Install Dependencies
+              # run: npm ci --prefer-offline
+              run: npm i
+
+            - name: Lint
+              run: ng lint
+
+            - name: Test
+              run: ng test
+
+            - name: Build
+              run: ng build
+
