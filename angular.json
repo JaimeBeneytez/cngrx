@@ -1,7 +1,50 @@
 {
-  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+"$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "cngrx": {
+      "projectType": "library",
+      "root": "cngrx",
+      "sourceRoot": "cngrx/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "cngrx/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "cngrx/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "cngrx/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-builders/jest:run",
+          "options": {
+            "configPath": "./jest.config.ts"
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "cngrx/**/*.ts",
+              "cngrx/**/*.html"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   }
 }
