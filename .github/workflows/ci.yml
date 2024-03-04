@@ -21,11 +21,11 @@ jobs:
               run: npm i
 
             - name: Lint
-              run: ng lint
+              run: npm run lint
 
             - name: Test
-              run: ng test
+              run: npm run test
 
             - name: Build
-              run: ng build
+              run: npm run build
 
