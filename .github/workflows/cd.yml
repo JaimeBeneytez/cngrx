@@ -1,8 +1,8 @@
-name: CI
+name: CD
 
 on:
     push:
-        branches-ignore:
+        branches:
           - main
 
 jobs:
@@ -14,6 +14,7 @@ jobs:
             - uses: actions/setup-node@v4
               with:
                 node-version: 18
+                registry-url: 'https://registry.npmjs.org'
                 cache: 'npm'
 
             - name: 🧳 Install Dependencies
@@ -28,4 +29,12 @@ jobs:
 
             - name: 🛠️ Build
               run: npm run build
+
+            - name: 📜 Copy README.md
+              run: cp ./README.md dist/cngrx
+
+            - name: 📦 Publish package on NPM
+              run: cd dist/cngrx && npm publish --access public
+              env:
+                NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 

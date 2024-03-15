@@ -1,6 +1,11 @@
 {
   "name": "@jbt/cngrx",
-  "version": "0.1.0",
+  "version": "0.0.2",
+  "autor": "Jaime Beneytez",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JaimeBeneytez/cngrx"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -9,7 +14,7 @@
     "test": "ng test",
     "lint": "ng lint"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/compiler": "^17.2.0",
     "@angular/core": "^17.2.0",
