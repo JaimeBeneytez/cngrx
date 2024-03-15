@@ -1,10 +1,16 @@
 {
   "name": "@jbt/cngrx",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "autor": "Jaime Beneytez",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JaimeBeneytez/cngrx"
+  },
   "peerDependencies": {
     "@angular/common": "^17.2.0",
     "@angular/core": "^17.2.0"
   },
+  "private": false,
   "dependencies": {
     "tslib": "^2.3.0"
   },

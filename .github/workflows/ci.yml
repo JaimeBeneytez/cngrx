@@ -16,16 +16,16 @@ jobs:
                 node-version: 18
                 cache: 'npm'
 
-            - name: Install Dependencies
+            - name: 🧳 Install Dependencies
               # run: npm ci --prefer-offline
               run: npm i
 
-            - name: Lint
+            - name: 👔 Lint
               run: npm run lint
 
-            - name: Test
+            - name: 🧪 Test
               run: npm run test
 
-            - name: Build
+            - name: 🛠️ Build
               run: npm run build
 
