@@ -1,6 +1,11 @@
 {
   "name": "@jbt/cngrx",
-  "version": "0.1.0",
+  "version": "0.0.1",
+  "autor": "Jaime Beneytez",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JaimeBeneytez/cngrx"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
