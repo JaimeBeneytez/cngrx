@@ -8,7 +8,7 @@ on:
 
 jobs:
     ci:
-        name: CI • lint, test, build, publish
+        name: Lint, test, build, publish
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v4
